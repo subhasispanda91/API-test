@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230719 08:25:26.416" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Get" source="C:\Users\subhaspa\PycharmProjects\pythonProject\Test_Get.robot">
+<test id="s1-t1" name="Get request" line="9">
+<kw name="Test Get Request API">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysession</arg>
+<arg>${url}</arg>
+<arg>verify=true</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230719 08:25:26.531" level="INFO">Creating Session using : alias=mysession, url=http://vtech--tst1.custhelp.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230719 08:25:26.531" endtime="20230719 08:25:26.532"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<arg>content-type=application/json</arg>
+<arg>clear-cache=no-cache</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" starttime="20230719 08:25:26.532" endtime="20230719 08:25:26.533"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/app/businessphones/utils/login_form111/</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20230719 08:25:29.210" level="INFO">GET Request : url=http://vtech--tst1.custhelp.com/app/businessphones/utils/login_form111/ (redirected) 
+ path_url=/app/businessphones/utils/login_form111/ 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230719 08:25:29.210" level="INFO">GET Response : url=https://vtech--tst1.custhelp.com/app/businessphones/utils/login_form111/ 
+ status=404, reason=Not Found 
+ headers={'Date': 'Wed, 19 Jul 2023 02:55:29 GMT', 'Content-Type': 'text/html;charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Expires': '-1', 'RNT-JN-Int-UUID': '1f1789cc-7bd2-4356-85ed-bd83dfe77eb5', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip', 'RNT-JN-Int-Machine': '42.2', 'RNT-JN-Ext-Machine': '43.3', 'Pragma': 'no-cache', 'Set-Cookie': 'cp_session=fU_d_2jzF8Oor5vlF9KzTU5xG1381aXZ4yDl9DsRAJ2xQ8BFbE25O9lr2CUse1GJN4UciheIRtgVQV9IJ31rbk3RViKV5VlVPI7GK3KP9JRUJ4_TRHQN_GR_kMDTnlxDqQurkSY6USkrhhoYO0p4FI_HodRN6Cw4scuthJTQ9OR_Gm7qk4j~S72yqkIE6q_346bH2YTIw3zr4dIaDB~nOS_Z_Df~_9zr3KLEYDX01qBEMvnw8a3hxNkit1_2~9KCw2sBPZP8ZaIclygtpYY_Ei5U33cLOpJi0N70GAu3L8JmdiOf9PybpdjKH5mHRtPUcSG_Grkz~U4vRPobzsLFvLl4MbtIucs5j2qB923G5HE5I2U7tWsE3z5YvdRkjE6N70Sr8xfOmTr9DjvC8W5sHrSf~RWsD1Qk5EuGYGaaQpMbbSj0Dg6Bn3bKCXqCRTN1IHqcPqVTsqiz46ZnRnnXFIU3gsr8BlIUKduiNs6plTZu2lLaLWodfJo38AKQ75pTr~w3oFdmhX5eVkaCfmpg_1o75AUkOy_0NLpKE1lcNPyFmYn0rbUnjo2VIhe0PaFXb4J1iJQs7dgxs!; path=/; httponly; SameSite=Lax', 'Content-Security-Policy': 'frame-ancestors DENY', 'RNT-JN-Ext-UUID': 'de23c793-b15b-4236-8fc9-073b0a5d2ef5', 'X-Content-Security-Policy': 'frame-ancestors DENY', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'RNT-Time': 'D=306216 t=1689735328713679', 'Cache-Control': 'no-cache, no-store', 'RNT-Machine': '1.147', 'RNT-GK-Machine': '1.215'} 
+ body=&lt;!DOCTYPE html&gt;
+&lt;html lang="en-US"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"/&gt;
+    &lt;title&gt;Page Not Found&lt;/title&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /&gt;
+    &lt;!--[if lt IE 9]&gt;&lt;script src="/euf/core/static/html5.js"&gt;&lt;/script&gt;&lt;![endif]--&gt;
+        
+&lt;style type='text/css'&gt;
+ &lt;!-- 
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none !important;}
+ --&gt;&lt;/style&gt;
+&lt;base href='https://vtech--tst1.custhelp.com/euf/generated/optimized/1678547609/themes/standard/'/&gt;
+&lt;link href='/euf/generated/optimized/1678547609/templates/standard.themes.standard.SITE.css' rel='stylesheet' type='text/css' media='all'/&gt;
+
+    &lt;link rel="icon" href="/euf/assets/images/favicon.png" type="image/png"/&gt;
+    &lt;script type="text/javascript"&gt;
+    &lt;!--
+    if (parent !== self) {
+        top.location.href = location.href;
+    }
+    else if (top !== self) {
+        top.location.href = self.document.location;
+    }
+    //--&gt;
+    &lt;/script&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;/head&gt;
+&lt;body class="yui-skin-sam yui3-skin-sam" itemscope itemtype="http://schema.org/WebPage"&gt;
+&lt;a href="#rn_MainContent" class="rn_SkipNav rn_ScreenReaderOnly"&gt;Skip Navigation&lt;/a&gt;
+&lt;!--header&gt;
+    &lt;rn:widget path="utils/CapabilityDetector"/&gt;
+    &lt;nav&gt;
+        &lt;div class="rn_NavigationBar"&gt;
+            &lt;input type="checkbox" id="rn_NavigationMenuButtonToggle" class="rn_ScreenReaderOnly" /&gt;
+            &lt;label class="rn_NavigationMenuButton" for="rn_NavigationMenuButtonToggle"&gt;
+                menu            &lt;/label&gt;
+            &lt;ul class="rn_NavigationMenu"&gt;
+                 &lt;li&gt;&lt;rn:widget path="navigation/NavigationTab" label_tab="Support Home" link="/app/home" pages="home"/&gt;&lt;/li&gt;
+                 &lt;li&gt;&lt;rn:widget path="navigation/NavigationTab" label_tab="Ask a Question" link="/app/ask" pages="ask, ask_confirm"/&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="rn_LoginStatus"&gt;
+            &lt;rn:condition logged_in="false"&gt;
+                &lt;rn:widget path="login/AccountDropdown" subpages="Account Overview &gt; account/overview"
+                sub:input_Contact.Emails.PRIMARY.Address:label_input="Email Address"
+                sub:input_Contact.Emails.PRIMARY.Address:required="true"
+                sub:input_Contact.Emails.PRIMARY.Address:validate_on_blur="true"
+                sub:input_Contact.Login:label_input="Username"
+                sub:input_Contact.Login:required="true"
+                sub:input_Contact.Login:validate_on_blur="true"
+                sub:input_Contact.Name.First:required="true"
+                sub:input_Contact.Name.First:label_input="First Name"
+                sub:input_Contact.Name.Last:required="true"
+                sub:input_Contact.Name.Last:label_input="Last Name"
+                sub:input_SocialUser.DisplayName:label_input="Display Name"
+                sub:input_Contact.NewPassword:label_input="Password"
+                /&gt;
+            &lt;rn:condition_else/&gt;
+                &lt;rn:condition is_social_moderator="true"&gt;
+                    &lt;rn:widget path="login/AccountDropdown" subpages="Account Overview &gt; account/overview, Support History &gt; account/questions/list, Account Settings &gt; account/profile, Public Profile &gt; public_profile/user/, Moderation &gt; social/moderate/overview"/&gt;
+                &lt;rn:condition_else/&gt;
+                    &lt;rn:condition is_active_social_user="true"&gt;
+                        &lt;rn:widget path="login/AccountDropdown" subpages="Account Overview &gt; account/overview, Support History &gt; account/questions/list, Account Settings &gt; account/profile, Public Profile &gt; public_profile/user/"/&gt;
+                    &lt;rn:condition_else/&gt;
+                        &lt;rn:widget path="login/AccountDropdown" subpages="Account Overview &gt; account/overview, Support History &gt; account/questions/list, Account Settings &gt; account/profile"/&gt;
+                    &lt;/rn:condition&gt;
+                &lt;/rn:condition&gt;
+            &lt;/rn:condition&gt;
+        &lt;/div&gt;
+        &lt;rn:condition hide_on_pages="home, public_profile, results, answers/list, social/questions/list"&gt;
+            &lt;div class="rn_SearchBar"&gt;
+                &lt;rn:widget path="search/SimpleSearch" report_page_url="/app/results"/&gt;
+            &lt;/div&gt;
+        &lt;/rn:condition&gt;
+    &lt;/nav&gt;
+&lt;/header--&gt;
+&lt;div class="rn_Body"&gt;
+    &lt;div class="rn_MainColumn" role="main"&gt;
+        &lt;a id="rn_MainContent"&gt;&lt;/a&gt;
+&lt;div class="rn_Hero"&gt;
+    &lt;div class="rn_Container"&gt;
+        &lt;h1&gt;Page Not Found&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="rn_PageContent rn_ErrorPage rn_Container"&gt;
+    &lt;p&gt;The page you requested was not found.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--footer class="rn_Footer"&gt;
+    &lt;div class="rn_Container"&gt;
+        &lt;rn:widget path="search/ProductCategoryList" report_page_url="/app/products/detail"/&gt;
+        &lt;div class="rn_Misc"&gt;
+            &lt;rn:widget path="utils/PageSetSelector"/&gt;
+            &lt;rn:widget path="utils/OracleLogo"/&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer--&gt;
+&lt;script&gt;var YUI_config={"fetchCSS":false,"modules":{"RightNowTreeView":"/euf/core/3.7/js/5.26/min/modules/ui/treeview.js","RightNowTreeViewDialog":"/euf/core/3.7/js/5.26/min/modules/ui/treeviewdialog.js","RightNowTreeViewDropdown":"/euf/core/3.7/js/5.26/min/modules/ui/treeviewdropdown.js"},"lang":["en-US","en-US"],"injected":true,"comboBase":"//vtech--tst1.widget.custhelp.com/ci/cache/yuiCombo/","groups":{"gallery-treeview":{"base":"/rnt/rnw/yui_3.18/gallery-treeview/","modules":{"gallery-treeview":{"path":"gallery-treeview-min.js"}}}}};&lt;/script&gt;
+&lt;script type="text/javascript" src="/euf/core/3.7/js/5.26/min/RightNow.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+/* &lt;![CDATA[ */
+RightNow.Env=(function(){var _props={module:'standard',coreAssets:'/euf/core/3.7/',yuiCore:'/rnt/rnw/yui_3.18/',profileData:{"isLoggedIn":false,"previouslySeenEmail":null}};return function(prop){return _props[prop];};})();RightNow.Interface.setMessagebase(function(){return {"ATTRIBUTES_LC_LBL":"attributes","ATTRIBUTE_HAVENT_SPECIFIED_VALID_IT_LBL":"  Value for '%s' attribute is a number and you haven't specified a valid value for it.","BACK_LBL":"Back","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Beginning of dialog, please dismiss dialog before continuing","CHANGED_LBL":"Changed","CLOSE_CMD":"Close","COL_SAVE_ED_ERR_L_INV_E_PERMISSIONS_MSG":"Widget changes could not be saved due to errors while saving. Please check the file permissions.","DIALOG_LBL":"dialog","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"dialog, please read above text for dialog message","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"End of dialog, please dismiss dialog before continuing","ERROR_LBL":"Error","ERRORS_LBL":"Errors","ERROR_PCT_S_LBL":"Error: %s","ERROR_REQUEST_ACTION_COMPLETED_MSG":"There was an error with the request and the action could not be completed.","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"There was an error submitting the form due to invalid input","ERR_SUBMITTING_SEARCH_MSG":"There was a problem with your request.  Please change your search terms and try again.","HELP_LBL":"Help","INFORMATION_LBL":"Information","INFORMATION_S_LBL":"Information: %s","OK_LBL":"OK","PCT_S_ATTRIB_REQD_HAVENT_VALUE_MSG":"The '%s' attribute is required and you haven't specified a value for it.","PG_COL_SAVE_ED_ERR_L_INV_E_PERMISSIONS_MSG":"Widget changes of page could not be saved due to errors while saving. Please check the page file permissions.","REVEALED_DISP_TB_DD_OP_ADDTL_T_EXPOSED_MSG":"Note: The widget, when revealed, can be inspected, but you may need to perform additional actions for it to be exposed.","SOME_INST_ID_BUT_SEE_ITS_SATTRIBUTESS_MSG":"Some or all instances of this widget are hidden, but you can see its %sattributes%s.","SUCCESS_S_LBL":"Success: %s","TEMPL_COL_SAVE_ED_ERR_INV_TEMPL_PRMSSNS_MSG":"Widget changes of template could not be saved due to errors while saving. Please check the template file permissions.","THIS_WIDGET_HAS_NO_ATTRIBUTES_MSG":"This widget has no attributes.","THIS_WIDGET_HAS_NO_VIEW_LBL":"This widget has no view","VAL_PCT_S_ATTRIB_MINIMUM_VAL_ACCD_MSG":"Value for '%s' attribute is too small. The minimum value accepted is %s but the value received was %s.","VAL_PCT_S_ATTRIB_MAX_VAL_ACCD_PCT_S_MSG":"Value for '%s' attribute is too large. The maximum value accepted is %s but the value received was %s.","VIEW_ATTRIBUTES_LBL":"View Attributes","WARNING_LBL":"Warning","WARNING_S_LBL":"Warning: %s","WIDGET_CHANGES_ERRORS_WILL_IGNORED_MSG":"Widget changes with errors will be ignored."};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^((([-_!#$%&amp;'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&amp;'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[; ]*)$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"vtech--tst1.custhelp.com","SUBMIT_TOKEN_EXP":30};});
+RightNow.Url.setParameterSegment(3);
+RightNow.Event.setNoSessionCookies(true);
+RightNow.Interface.Constants = 
+{"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&amp;'*+\/=?^~`{|}\\w]+([.][-_!#$%&amp;'*+\/=?^~`{|}\\w]*)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+YUI().use('event-base',function(Y){Y.on('domready',function(){})});
+/* ]]&gt; */
+&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+var _rnq=_rnq||[];_rnq.push({"s":"Tl2Fhucq","uh":"b967f3ad","uc":"vtech--tst1.custhelp.com\/app\/error404","b":"ca241023","i":"vtech__tst1:vtech","f":"rnw","p":"Customer Portal","v":"22.5.0.1-b26-sp5","th":"www.rnengage.com"});
+(function(e){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="Action Capture";a.role="presentation";(a.frameElement||a).style.cssText="position:absolute;width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(f){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;e.length;)a=this.createElement("script"),
+d&amp;&amp;(thi... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20230719 08:25:29.211" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://vtech--tst1.custhelp.com/app/businessphones/utils/login_form111/</msg>
+<status status="FAIL" starttime="20230719 08:25:26.533" endtime="20230719 08:25:29.216"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${res_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20230719 08:25:29.216" endtime="20230719 08:25:29.216"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${res_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230719 08:25:29.216" endtime="20230719 08:25:29.216"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${res_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20230719 08:25:29.217" endtime="20230719 08:25:29.217"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${res_body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20230719 08:25:29.217" endtime="20230719 08:25:29.217"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${res_body}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230719 08:25:29.217" endtime="20230719 08:25:29.217"/>
+</kw>
+<status status="FAIL" starttime="20230719 08:25:26.531" endtime="20230719 08:25:29.217"/>
+</kw>
+<tag>API Test</tag>
+<status status="FAIL" starttime="20230719 08:25:26.530" endtime="20230719 08:25:29.218">HTTPError: 404 Client Error: Not Found for url: https://vtech--tst1.custhelp.com/app/businessphones/utils/login_form111/</status>
+</test>
+<status status="FAIL" starttime="20230719 08:25:26.419" endtime="20230719 08:25:29.220"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">API Test</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Get">Test Get</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
